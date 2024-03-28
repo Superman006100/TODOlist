@@ -2,8 +2,7 @@ const toDoList = document.getElementById("todolist");
 const itemList = document.getElementById("item");
 
 function addTask() {
-    toDoList.value.trim();
-    if (toDoList.value === ''){
+    if (toDoList.value.trim() === ''){
         alert("Please fillup the Add Tasks field.")
     }
     else{
