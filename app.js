@@ -1,15 +1,49 @@
-const toDoList = document.getElementById("todolist");
-const itemList = document.getElementById("item");
+const inputTask = document.querySelector("#inputTask");
+const btnAdd = document.querySelector("#btnAdd");
 
-function addTask() {
-    if (toDoList.value.trim() === ''){
-        alert("Please fillup the Add Tasks field.")
+btnAdd.addEventListener('click', () => {
+    if (inputTask.value.trim().length == '') {
+    alert("Please enter tasks to add!")
+    return;
+
     }
+
     else{
-        let li = document.createElement("li");
-        li.innerHTML = toDoList.value;
-        itemList.appendChild(li);
+
+        //create new division for list
+        // console.log(inputTask.value)
+        const listContainer = document.getElementById("list")
+        const listItem = document.createElement("div");
+        listItem.className = "item";
+        listContainer.appendChild(listItem);
+
+        //create new list
+        const listTask = document.createElement("p");
+        listTask.id = "todo-list";
+        listTask.innerHTML = inputTask.value;
+        listItem.appendChild(listTask);
+
+        const btnEdit = document.createElement("button");
+        btnEdit.className = "Edit";
+        btnEdit.innerHTML = "Edit";
+        listItem.appendChild(btnEdit);
+
+        btnEdit.addEventListener('click', () => {
+            inputTask.value = listTask.innerText;
+            btnEdit.parentElement.remove();
+
+            
+            document.getElementById('btnAdd').innerText = "Update";
+        })
+
+
+
+
+        
     }
-    toDoList.value = "";
-}
+    inputTask.value = '';
+    document.getElementById('btnAdd').innerText = "Add";
+ }
+)
+
 
