@@ -3,26 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Todo List</title>
+    <link rel="stylesheet" href="style.css"/>
+    <title>ToDo List</title>
 </head>
 <body>
     <section id="main">
-        <div id="heading">
-            <h2>To Do List</h2>
+        <h2>ToDo List<img src=""/></h2>
+        <div id="head">
+            <input type="text" id="inputTask" placeholder="Input Tasks" maxlength="24" autofocus="autofocus"/>
+            <button type="button" id="btnAdd">Add</button>
         </div>
-        <div id="info">
-            <input type="text" id="todolist" placeholder="Add Tasks">
-            <button id="addtask" onclick="addTask()">Add</button>
-        </div>
-        <div id="content">
-            <ul id="item">
-                <!-- <li>
-                    This is task one.
-                    <img src="img/cross.jpg"/>
-                </li> -->
-            </ul>
-                        
+        <div id="list">
+            <!-- <div class="item">
+                <p>This is the list</p>
+                <button type="button">Update</button>
+            </div> -->
         </div>
     </section>
     <script src="app.js"></script>
