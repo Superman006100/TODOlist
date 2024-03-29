@@ -2,109 +2,133 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
 
 
-body{
+body {
     margin: 0;
-    background-color: #232442;
-    color: #111126;
-    font-size: 15px;
-    font-family: Poppins;
+    padding: 0;
+    background-color:#232442 ;
     display: flex;
     justify-content: center;
-    align-items: center;
-    & #main{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        border-radius: 20px;
-        align-items: center;
-        padding-bottom: 20px;
-        width: 400px;
-        background-color: #ffffff;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        margin-top: 10%;
+    font-family: Poppins;
+
+    & section{
         position: relative;
+        background-color: #ffff ;
+        border-radius: 40px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
-        & #heading h2{
-            font-size: 2em;
-        }
-        & #info{
+        display: flex;
+        margin-top: 25%;
+        /* margin-left: 50%; */
+        width: 300px;
+        height: 300px;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+        text-align: left;
+
+        & h2 {
             position: relative;
+            width: 80%;
+            margin: 20px;
+            padding-left: 10px;
+            
+        }
+
+        & div#head {
+            /* background-color: blue; */
+            position: relative;
+            width: 80%;
+            margin-right: -10px;
+            gap: 10px;
             display: flex;
-            flex-direction: row;
-            gap: 20px;
-            justify-content: center;
-            width: 300px;
-            padding-left: 20px;
-            padding-right: 20px;
+            display: row;
+            justify-content: space-between;
 
-            & #todolist{
-                padding-left: 10px;
+            & input {
+                position: relative;
+                background-color: rgb(174, 255, 255);
+                border: none;
                 border-radius: 20px;
-                height: 35px;
-                width: 300px;
+                width: 100%;
+                padding: 10px;
+                box-shadow: 2px 2px 7px 1px rgb(145, 157, 161);
+                 
+                &:focus{
+                    outline: none;
+                }
+                
+                /* text-wrap: wrap; */
             }
+            & button{
+                position: relative;
+                box-shadow: 2px 2px 7px 1px rgb(145, 157, 161);
 
-            & #addtask{
-                background-color: #659cdf;
+                right: 0px;
+                top: 0px;
+                bottom: 0px;
+                border: none;
                 width: 60px;
                 border-radius: 20px;
-                border: none;
-                color: #fff6e1;
-                transition: 0.5s;
+                background-color: rgb(183, 225, 225);
+                transition: .1s;
+                
                 &:hover{
-                    background-color: rgb(164, 248, 74);
-                    color: #232442;
-                    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 2px 8px 0 rgba(0, 0, 0, 0.19);
+                    background-color: rgb(255, 133, 117);
+                    color: #ffff;
                     cursor: pointer;
+
                 }
+                
             }
+            
         }
-        & #content{
+        & div#list {
             position: relative;
+            width: 80%;
+            margin-top: 20px;  
             display: flex;
             flex-direction: column;
-            align-items: start;
-            gap: 20px;
-            /* background-color: #659cdf; */
-            width: 85%;
-            margin-top: 20px;
-            justify-content: center;
-            align-items: center;
-            text-align: left;
-            padding-top: 5px;
-            padding-bottom: 5px;
+            gap: 10px;
             
-            }
-
-            & #item{
-                width: 100%;
-                gap: 15px;
+            & div.item{
                 position: relative;
+                
+                background-color: #f0ff6c;
                 display: flex;
-                flex-direction: column;
-                justify-content: center;
+                gap: 20px;
+                flex-direction: row;
+                justify-content: space-between;
                 align-items: center;
-                transition: 0.1s;
-                
+                border-radius: 40px;
+                margin-left: 5px;
+                padding: 10px;
+                height: 20px;
+                text-wrap: wrap;
+
+                & p{
+                 font-size: 12px;
+                 color: indigo;
+                 text-wrap: wrap;
+                 /* overflow: scroll; */
                 }
-                & li{
-                    background-color: rgb(164, 248, 74);
-                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-                    border-radius: 50px;
-                    justify-content: center;
-                    width: 80%;
-                    color: black;
-                    text-align: left;
-                    padding-top: 5px;
-                    padding-bottom: 5px;
-                    padding-left: 20px;
+                & button{
+                    position: relative;
+                    border: none;
+                    border-radius: 30px;
+                    padding: 10px;
+                    width: 60px;
+                    margin: -10px;
+                    transition: .2s;
                     &:hover{
-                        scale: 1.02;
+                        scale: 1.01;
+                        color: white;
+                        cursor: pointer;
+                        background-color: rgb(255, 133, 117);
+                    }
                 }
-                
             }
         }
         
     }
-    
-}
+    }
+
